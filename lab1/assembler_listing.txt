@@ -1,0 +1,570 @@
+Dump of assembler code for function main():
+   0x000000000040203a <+0>:	push   %rbp
+   0x000000000040203b <+1>:	push   %rbx
+   0x000000000040203c <+2>:	sub    $0x358,%rsp
+   0x0000000000402043 <+9>:	lea    0x80(%rsp),%rbp
+   0x000000000040204b <+17>:	vmovaps %xmm6,0x2c0(%rbp)
+   0x0000000000402053 <+25>:	lea    0x2c0(%rbp),%rax
+   0x000000000040205a <+32>:	sub    $0x2d0,%rax
+   0x0000000000402060 <+38>:	add    $0x1f,%rax
+   0x0000000000402064 <+42>:	shr    $0x5,%rax
+   0x0000000000402068 <+46>:	shl    $0x5,%rax
+   0x000000000040206c <+50>:	mov    %rax,%rbx
+   0x000000000040206f <+53>:	callq  0x402d70 <__main>
+=> 0x0000000000402074 <+58>:	lea    0xdf(%rbp),%rax
+   0x000000000040207b <+65>:	mov    %rax,%rcx
+   0x000000000040207e <+68>:	callq  0x402cb8 <std::allocator<char>::allocator()>
+   0x0000000000402083 <+73>:	lea    0xdf(%rbp),%rdx
+   0x000000000040208a <+80>:	lea    0xb0(%rbp),%rax
+   0x0000000000402091 <+87>:	mov    %rdx,%r8
+   0x0000000000402094 <+90>:	lea    0xafbc(%rip),%rdx        # 0x40d057
+   0x000000000040209b <+97>:	mov    %rax,%rcx
+   0x000000000040209e <+100>:	callq  0x40b300 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)>
+   0x00000000004020a3 <+105>:	lea    0xb0(%rbp),%rax
+   0x00000000004020aa <+112>:	mov    %rax,%rcx
+   0x00000000004020ad <+115>:	callq  0x40184e <print_header(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+   0x00000000004020b2 <+120>:	lea    0xb0(%rbp),%rax
+   0x00000000004020b9 <+127>:	mov    %rax,%rcx
+   0x00000000004020bc <+130>:	callq  0x40b4a0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+   0x00000000004020c1 <+135>:	lea    0xdf(%rbp),%rax
+   0x00000000004020c8 <+142>:	mov    %rax,%rcx
+   0x00000000004020cb <+145>:	callq  0x402ca8 <std::allocator<char>::~allocator()>
+   0x00000000004020d0 <+150>:	movq   $0x4,0x2b8(%rbp)
+   0x00000000004020db <+161>:	cmpq   $0x8,0x2b8(%rbp)
+   0x00000000004020e3 <+169>:	ja     0x40237a <main()+832>
+   0x00000000004020e9 <+175>:	vmovsd 0xb077(%rip),%xmm0        # 0x40d168
+   0x00000000004020f1 <+183>:	vmovsd %xmm0,0x2b0(%rbp)
+   0x00000000004020f9 <+191>:	vmovsd 0xb06f(%rip),%xmm0        # 0x40d170
+   0x0000000000402101 <+199>:	vmovsd %xmm0,0x270(%rbp)
+   0x0000000000402109 <+207>:	mov    0x2b8(%rbp),%rax
+   0x0000000000402110 <+214>:	test   %rax,%rax
+   0x0000000000402113 <+217>:	js     0x40211c <main()+226>
+   0x0000000000402115 <+219>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x000000000040211a <+224>:	jmp    0x402131 <main()+247>
+   0x000000000040211c <+226>:	mov    %rax,%rdx
+   0x000000000040211f <+229>:	shr    %rdx
+   0x0000000000402122 <+232>:	and    $0x1,%eax
+   0x0000000000402125 <+235>:	or     %rax,%rdx
+   0x0000000000402128 <+238>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x000000000040212d <+243>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x0000000000402131 <+247>:	mov    0xb040(%rip),%rax        # 0x40d178
+   0x0000000000402138 <+254>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x000000000040213c <+258>:	vmovq  %rax,%xmm0
+   0x0000000000402141 <+263>:	callq  0x404290 <pow>
+   0x0000000000402146 <+268>:	vcomisd 0xb032(%rip),%xmm0        # 0x40d180
+   0x000000000040214e <+276>:	jae    0x40215e <main()+292>
+   0x0000000000402150 <+278>:	vcvttsd2si %xmm0,%rax
+   0x0000000000402155 <+283>:	mov    %rax,0x268(%rbp)
+   0x000000000040215c <+290>:	jmp    0x402187 <main()+333>
+   0x000000000040215e <+292>:	vmovsd 0xb01a(%rip),%xmm1        # 0x40d180
+   0x0000000000402166 <+300>:	vsubsd %xmm1,%xmm0,%xmm0
+   0x000000000040216a <+304>:	vcvttsd2si %xmm0,%rax
+   0x000000000040216f <+309>:	mov    %rax,0x268(%rbp)
+   0x0000000000402176 <+316>:	movabs $0x8000000000000000,%rax
+   0x0000000000402180 <+326>:	xor    %rax,0x268(%rbp)
+   0x0000000000402187 <+333>:	mov    0x268(%rbp),%rax
+   0x000000000040218e <+340>:	mov    %rax,0x268(%rbp)
+   0x0000000000402195 <+347>:	callq  0x402c90 <std::chrono::_V2::system_clock::now()>
+   0x000000000040219a <+352>:	mov    %rax,0xa8(%rbp)
+   0x00000000004021a1 <+359>:	callq  0x40158c <rdtsc()>
+   0x00000000004021a6 <+364>:	mov    %rax,0x260(%rbp)
+   0x00000000004021ad <+371>:	movq   $0x0,0x2a8(%rbp)
+   0x00000000004021b8 <+382>:	mov    0x2a8(%rbp),%rax
+   0x00000000004021bf <+389>:	test   %rax,%rax
+   0x00000000004021c2 <+392>:	js     0x4021cb <main()+401>
+   0x00000000004021c4 <+394>:	vcvtsi2sd %rax,%xmm6,%xmm6
+   0x00000000004021c9 <+399>:	jmp    0x4021e0 <main()+422>
+   0x00000000004021cb <+401>:	mov    %rax,%rdx
+   0x00000000004021ce <+404>:	shr    %rdx
+   0x00000000004021d1 <+407>:	and    $0x1,%eax
+   0x00000000004021d4 <+410>:	or     %rax,%rdx
+   0x00000000004021d7 <+413>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x00000000004021dc <+418>:	vaddsd %xmm0,%xmm0,%xmm6
+   0x00000000004021e0 <+422>:	mov    0x2b8(%rbp),%rax
+   0x00000000004021e7 <+429>:	test   %rax,%rax
+   0x00000000004021ea <+432>:	js     0x4021f3 <main()+441>
+   0x00000000004021ec <+434>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x00000000004021f1 <+439>:	jmp    0x402208 <main()+462>
+   0x00000000004021f3 <+441>:	mov    %rax,%rdx
+   0x00000000004021f6 <+444>:	shr    %rdx
+   0x00000000004021f9 <+447>:	and    $0x1,%eax
+   0x00000000004021fc <+450>:	or     %rax,%rdx
+   0x00000000004021ff <+453>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402204 <+458>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x0000000000402208 <+462>:	mov    0xaf69(%rip),%rax        # 0x40d178
+   0x000000000040220f <+469>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x0000000000402213 <+473>:	vmovq  %rax,%xmm0
+   0x0000000000402218 <+478>:	callq  0x404290 <pow>
+   0x000000000040221d <+483>:	vcomisd %xmm6,%xmm0
+   0x0000000000402221 <+487>:	seta   %al
+   0x0000000000402224 <+490>:	test   %al,%al
+   0x0000000000402226 <+492>:	je     0x40224c <main()+530>
+   0x0000000000402228 <+494>:	vmovsd 0x2b0(%rbp),%xmm0
+   0x0000000000402230 <+502>:	vdivsd 0x270(%rbp),%xmm0,%xmm0
+   0x0000000000402238 <+510>:	vmovsd %xmm0,0x2b0(%rbp)
+   0x0000000000402240 <+518>:	incq   0x2a8(%rbp)
+   0x0000000000402247 <+525>:	jmpq   0x4021b8 <main()+382>
+   0x000000000040224c <+530>:	callq  0x40158c <rdtsc()>
+   0x0000000000402251 <+535>:	mov    %rax,0x258(%rbp)
+   0x0000000000402258 <+542>:	callq  0x402c90 <std::chrono::_V2::system_clock::now()>
+   0x000000000040225d <+547>:	mov    %rax,0xe8(%rbp)
+   0x0000000000402264 <+554>:	lea    0xa8(%rbp),%rdx
+   0x000000000040226b <+561>:	lea    0xe8(%rbp),%rax
+   0x0000000000402272 <+568>:	mov    %rax,%rcx
+   0x0000000000402275 <+571>:	callq  0x40a1f0 <std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> >, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > > const&)>
+   0x000000000040227a <+576>:	mov    %rax,0xe0(%rbp)
+   0x0000000000402281 <+583>:	lea    0xe0(%rbp),%rdx
+   0x0000000000402288 <+590>:	lea    0xa0(%rbp),%rax
+   0x000000000040228f <+597>:	mov    %rax,%rcx
+   0x0000000000402292 <+600>:	callq  0x40a180 <std::chrono::duration<double, std::ratio<1ll, 1ll> >::duration<long long, std::ratio<1ll, 1000000000ll>, void>(std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > const&)>
+   0x0000000000402297 <+605>:	lea    0xa0(%rbp),%rax
+   0x000000000040229e <+612>:	mov    %rax,%rcx
+   0x00000000004022a1 <+615>:	callq  0x409b90 <std::chrono::duration<double, std::ratio<1ll, 1ll> >::count() const>
+   0x00000000004022a6 <+620>:	vmovq  %xmm0,%rax
+   0x00000000004022ab <+625>:	mov    %rax,0x250(%rbp)
+   0x00000000004022b2 <+632>:	mov    0x268(%rbp),%rax
+   0x00000000004022b9 <+639>:	test   %rax,%rax
+   0x00000000004022bc <+642>:	js     0x4022c5 <main()+651>
+   0x00000000004022be <+644>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x00000000004022c3 <+649>:	jmp    0x4022da <main()+672>
+   0x00000000004022c5 <+651>:	mov    %rax,%rdx
+   0x00000000004022c8 <+654>:	shr    %rdx
+   0x00000000004022cb <+657>:	and    $0x1,%eax
+   0x00000000004022ce <+660>:	or     %rax,%rdx
+   0x00000000004022d1 <+663>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x00000000004022d6 <+668>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x00000000004022da <+672>:	vdivsd 0x250(%rbp),%xmm0,%xmm0
+   0x00000000004022e2 <+680>:	vmovsd %xmm0,0x248(%rbp)
+   0x00000000004022ea <+688>:	mov    0x258(%rbp),%rax
+   0x00000000004022f1 <+695>:	sub    0x260(%rbp),%rax
+   0x00000000004022f8 <+702>:	mov    %rax,0x240(%rbp)
+   0x00000000004022ff <+709>:	mov    0x240(%rbp),%rax
+   0x0000000000402306 <+716>:	test   %rax,%rax
+   0x0000000000402309 <+719>:	js     0x402312 <main()+728>
+   0x000000000040230b <+721>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x0000000000402310 <+726>:	jmp    0x402327 <main()+749>
+   0x0000000000402312 <+728>:	mov    %rax,%rdx
+   0x0000000000402315 <+731>:	shr    %rdx
+   0x0000000000402318 <+734>:	and    $0x1,%eax
+   0x000000000040231b <+737>:	or     %rax,%rdx
+   0x000000000040231e <+740>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402323 <+745>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x0000000000402327 <+749>:	vdivsd 0x250(%rbp),%xmm0,%xmm0
+   0x000000000040232f <+757>:	vmovsd %xmm0,0x238(%rbp)
+   0x0000000000402337 <+765>:	mov    0x240(%rbp),%rdx
+   0x000000000040233e <+772>:	vmovsd 0x248(%rbp),%xmm2
+   0x0000000000402346 <+780>:	vmovsd 0x250(%rbp),%xmm1
+   0x000000000040234e <+788>:	mov    0x268(%rbp),%rax
+   0x0000000000402355 <+795>:	vmovsd 0x238(%rbp),%xmm0
+   0x000000000040235d <+803>:	vmovsd %xmm0,0x20(%rsp)
+   0x0000000000402363 <+809>:	mov    %rdx,%r9
+   0x0000000000402366 <+812>:	mov    %rax,%rcx
+   0x0000000000402369 <+815>:	callq  0x401d0f <print_line(unsigned long long, double, double, unsigned long long, double)>
+   0x000000000040236e <+820>:	incq   0x2b8(%rbp)
+   0x0000000000402375 <+827>:	jmpq   0x4020db <main()+161>
+   0x000000000040237a <+832>:	callq  0x401730 <print_divider()>
+   0x000000000040237f <+837>:	lea    0x11f(%rbp),%rax
+   0x0000000000402386 <+844>:	mov    %rax,%rcx
+   0x0000000000402389 <+847>:	callq  0x402cb8 <std::allocator<char>::allocator()>
+   0x000000000040238e <+852>:	lea    0x11f(%rbp),%rdx
+   0x0000000000402395 <+859>:	lea    0xf0(%rbp),%rax
+   0x000000000040239c <+866>:	mov    %rdx,%r8
+   0x000000000040239f <+869>:	lea    0xacc1(%rip),%rdx        # 0x40d067
+   0x00000000004023a6 <+876>:	mov    %rax,%rcx
+   0x00000000004023a9 <+879>:	callq  0x40b300 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)>
+   0x00000000004023ae <+884>:	lea    0xf0(%rbp),%rax
+   0x00000000004023b5 <+891>:	mov    %rax,%rcx
+   0x00000000004023b8 <+894>:	callq  0x40184e <print_header(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+   0x00000000004023bd <+899>:	lea    0xf0(%rbp),%rax
+   0x00000000004023c4 <+906>:	mov    %rax,%rcx
+   0x00000000004023c7 <+909>:	callq  0x40b4a0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+   0x00000000004023cc <+914>:	lea    0x11f(%rbp),%rax
+   0x00000000004023d3 <+921>:	mov    %rax,%rcx
+   0x00000000004023d6 <+924>:	callq  0x402ca8 <std::allocator<char>::~allocator()>
+   0x00000000004023db <+929>:	movq   $0x4,0x2a0(%rbp)
+   0x00000000004023e6 <+940>:	cmpq   $0x8,0x2a0(%rbp)
+   0x00000000004023ee <+948>:	ja     0x402745 <main()+1803>
+   0x00000000004023f4 <+954>:	movq   $0x0,-0x50(%rbp)
+   0x00000000004023fc <+962>:	movq   $0x0,-0x48(%rbp)
+   0x0000000000402404 <+970>:	movq   $0x0,-0x40(%rbp)
+   0x000000000040240c <+978>:	movq   $0x0,-0x38(%rbp)
+   0x0000000000402414 <+986>:	vmovsd 0xad6c(%rip),%xmm0        # 0x40d188
+   0x000000000040241c <+994>:	vmovsd %xmm0,-0x50(%rbp)
+   0x0000000000402421 <+999>:	vmovsd 0xad5f(%rip),%xmm0        # 0x40d188
+   0x0000000000402429 <+1007>:	vmovsd %xmm0,-0x48(%rbp)
+   0x000000000040242e <+1012>:	movq   $0x0,-0x30(%rbp)
+   0x0000000000402436 <+1020>:	movq   $0x0,-0x28(%rbp)
+   0x000000000040243e <+1028>:	movq   $0x0,-0x20(%rbp)
+   0x0000000000402446 <+1036>:	movq   $0x0,-0x18(%rbp)
+   0x000000000040244e <+1044>:	vmovsd 0xad1a(%rip),%xmm0        # 0x40d170
+   0x0000000000402456 <+1052>:	vmovsd %xmm0,-0x30(%rbp)
+   0x000000000040245b <+1057>:	vmovsd 0xad0d(%rip),%xmm0        # 0x40d170
+   0x0000000000402463 <+1065>:	vmovsd %xmm0,-0x28(%rbp)
+   0x0000000000402468 <+1070>:	lea    -0x50(%rbp),%rax
+   0x000000000040246c <+1074>:	mov    %rax,0x1a0(%rbp)
+   0x0000000000402473 <+1081>:	mov    0x1a0(%rbp),%rax
+   0x000000000040247a <+1088>:	vmovapd (%rax),%xmm0
+   0x000000000040247e <+1092>:	vmovapd %xmm0,0x290(%rbp)
+   0x0000000000402486 <+1100>:	lea    -0x30(%rbp),%rax
+   0x000000000040248a <+1104>:	mov    %rax,0x1a8(%rbp)
+   0x0000000000402491 <+1111>:	mov    0x1a8(%rbp),%rax
+   0x0000000000402498 <+1118>:	vmovapd (%rax),%xmm0
+   0x000000000040249c <+1122>:	vmovapd %xmm0,0x220(%rbp)
+   0x00000000004024a4 <+1130>:	mov    0x2a0(%rbp),%rax
+   0x00000000004024ab <+1137>:	test   %rax,%rax
+   0x00000000004024ae <+1140>:	js     0x4024b7 <main()+1149>
+   0x00000000004024b0 <+1142>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x00000000004024b5 <+1147>:	jmp    0x4024cc <main()+1170>
+   0x00000000004024b7 <+1149>:	mov    %rax,%rdx
+   0x00000000004024ba <+1152>:	shr    %rdx
+   0x00000000004024bd <+1155>:	and    $0x1,%eax
+   0x00000000004024c0 <+1158>:	or     %rax,%rdx
+   0x00000000004024c3 <+1161>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x00000000004024c8 <+1166>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x00000000004024cc <+1170>:	mov    0xaca5(%rip),%rax        # 0x40d178
+   0x00000000004024d3 <+1177>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x00000000004024d7 <+1181>:	vmovq  %rax,%xmm0
+   0x00000000004024dc <+1186>:	callq  0x404290 <pow>
+   0x00000000004024e1 <+1191>:	vcomisd 0xac97(%rip),%xmm0        # 0x40d180
+   0x00000000004024e9 <+1199>:	jae    0x4024f9 <main()+1215>
+   0x00000000004024eb <+1201>:	vcvttsd2si %xmm0,%rax
+   0x00000000004024f0 <+1206>:	mov    %rax,0x218(%rbp)
+   0x00000000004024f7 <+1213>:	jmp    0x402522 <main()+1256>
+   0x00000000004024f9 <+1215>:	vmovsd 0xac7f(%rip),%xmm1        # 0x40d180
+   0x0000000000402501 <+1223>:	vsubsd %xmm1,%xmm0,%xmm0
+   0x0000000000402505 <+1227>:	vcvttsd2si %xmm0,%rax
+   0x000000000040250a <+1232>:	mov    %rax,0x218(%rbp)
+   0x0000000000402511 <+1239>:	movabs $0x8000000000000000,%rax
+   0x000000000040251b <+1249>:	xor    %rax,0x218(%rbp)
+   0x0000000000402522 <+1256>:	mov    0x218(%rbp),%rax
+   0x0000000000402529 <+1263>:	mov    %rax,0x218(%rbp)
+   0x0000000000402530 <+1270>:	callq  0x402c90 <std::chrono::_V2::system_clock::now()>
+   0x0000000000402535 <+1275>:	mov    %rax,0x98(%rbp)
+   0x000000000040253c <+1282>:	callq  0x40158c <rdtsc()>
+   0x0000000000402541 <+1287>:	mov    %rax,0x210(%rbp)
+   0x0000000000402548 <+1294>:	movq   $0x0,0x288(%rbp)
+   0x0000000000402553 <+1305>:	mov    0x288(%rbp),%rax
+   0x000000000040255a <+1312>:	test   %rax,%rax
+   0x000000000040255d <+1315>:	js     0x402566 <main()+1324>
+   0x000000000040255f <+1317>:	vcvtsi2sd %rax,%xmm6,%xmm6
+   0x0000000000402564 <+1322>:	jmp    0x40257b <main()+1345>
+   0x0000000000402566 <+1324>:	mov    %rax,%rdx
+   0x0000000000402569 <+1327>:	shr    %rdx
+   0x000000000040256c <+1330>:	and    $0x1,%eax
+   0x000000000040256f <+1333>:	or     %rax,%rdx
+   0x0000000000402572 <+1336>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402577 <+1341>:	vaddsd %xmm0,%xmm0,%xmm6
+   0x000000000040257b <+1345>:	mov    0x2a0(%rbp),%rax
+   0x0000000000402582 <+1352>:	test   %rax,%rax
+   0x0000000000402585 <+1355>:	js     0x40258e <main()+1364>
+   0x0000000000402587 <+1357>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x000000000040258c <+1362>:	jmp    0x4025a3 <main()+1385>
+   0x000000000040258e <+1364>:	mov    %rax,%rdx
+   0x0000000000402591 <+1367>:	shr    %rdx
+   0x0000000000402594 <+1370>:	and    $0x1,%eax
+   0x0000000000402597 <+1373>:	or     %rax,%rdx
+   0x000000000040259a <+1376>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x000000000040259f <+1381>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x00000000004025a3 <+1385>:	mov    0xabce(%rip),%rax        # 0x40d178
+   0x00000000004025aa <+1392>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x00000000004025ae <+1396>:	vmovq  %rax,%xmm0
+   0x00000000004025b3 <+1401>:	callq  0x404290 <pow>
+   0x00000000004025b8 <+1406>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x00000000004025bc <+1410>:	vmovsd 0xabcc(%rip),%xmm0        # 0x40d190
+   0x00000000004025c4 <+1418>:	vdivsd %xmm0,%xmm1,%xmm0
+   0x00000000004025c8 <+1422>:	vcomisd %xmm6,%xmm0
+   0x00000000004025cc <+1426>:	seta   %al
+   0x00000000004025cf <+1429>:	test   %al,%al
+   0x00000000004025d1 <+1431>:	je     0x402617 <main()+1501>
+   0x00000000004025d3 <+1433>:	vmovapd 0x290(%rbp),%xmm0
+   0x00000000004025db <+1441>:	vmovapd %xmm0,0x190(%rbp)
+   0x00000000004025e3 <+1449>:	vmovapd 0x220(%rbp),%xmm0
+   0x00000000004025eb <+1457>:	vmovapd %xmm0,0x180(%rbp)
+   0x00000000004025f3 <+1465>:	vmovapd 0x190(%rbp),%xmm0
+   0x00000000004025fb <+1473>:	vdivpd 0x180(%rbp),%xmm0,%xmm0
+   0x0000000000402603 <+1481>:	vmovapd %xmm0,0x290(%rbp)
+   0x000000000040260b <+1489>:	incq   0x288(%rbp)
+   0x0000000000402612 <+1496>:	jmpq   0x402553 <main()+1305>
+   0x0000000000402617 <+1501>:	callq  0x40158c <rdtsc()>
+   0x000000000040261c <+1506>:	mov    %rax,0x208(%rbp)
+   0x0000000000402623 <+1513>:	callq  0x402c90 <std::chrono::_V2::system_clock::now()>
+   0x0000000000402628 <+1518>:	mov    %rax,0x128(%rbp)
+   0x000000000040262f <+1525>:	lea    0x98(%rbp),%rdx
+   0x0000000000402636 <+1532>:	lea    0x128(%rbp),%rax
+   0x000000000040263d <+1539>:	mov    %rax,%rcx
+   0x0000000000402640 <+1542>:	callq  0x40a1f0 <std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> >, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > > const&)>
+   0x0000000000402645 <+1547>:	mov    %rax,0x120(%rbp)
+   0x000000000040264c <+1554>:	lea    0x120(%rbp),%rdx
+   0x0000000000402653 <+1561>:	lea    0x90(%rbp),%rax
+   0x000000000040265a <+1568>:	mov    %rax,%rcx
+   0x000000000040265d <+1571>:	callq  0x40a180 <std::chrono::duration<double, std::ratio<1ll, 1ll> >::duration<long long, std::ratio<1ll, 1000000000ll>, void>(std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > const&)>
+   0x0000000000402662 <+1576>:	lea    0x90(%rbp),%rax
+   0x0000000000402669 <+1583>:	mov    %rax,%rcx
+   0x000000000040266c <+1586>:	callq  0x409b90 <std::chrono::duration<double, std::ratio<1ll, 1ll> >::count() const>
+   0x0000000000402671 <+1591>:	vmovq  %xmm0,%rax
+   0x0000000000402676 <+1596>:	mov    %rax,0x200(%rbp)
+   0x000000000040267d <+1603>:	mov    0x218(%rbp),%rax
+   0x0000000000402684 <+1610>:	test   %rax,%rax
+   0x0000000000402687 <+1613>:	js     0x402690 <main()+1622>
+   0x0000000000402689 <+1615>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x000000000040268e <+1620>:	jmp    0x4026a5 <main()+1643>
+   0x0000000000402690 <+1622>:	mov    %rax,%rdx
+   0x0000000000402693 <+1625>:	shr    %rdx
+   0x0000000000402696 <+1628>:	and    $0x1,%eax
+   0x0000000000402699 <+1631>:	or     %rax,%rdx
+   0x000000000040269c <+1634>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x00000000004026a1 <+1639>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x00000000004026a5 <+1643>:	vdivsd 0x200(%rbp),%xmm0,%xmm0
+   0x00000000004026ad <+1651>:	vmovsd %xmm0,0x1f8(%rbp)
+   0x00000000004026b5 <+1659>:	mov    0x208(%rbp),%rax
+   0x00000000004026bc <+1666>:	sub    0x210(%rbp),%rax
+   0x00000000004026c3 <+1673>:	mov    %rax,0x1f0(%rbp)
+   0x00000000004026ca <+1680>:	mov    0x1f0(%rbp),%rax
+   0x00000000004026d1 <+1687>:	test   %rax,%rax
+   0x00000000004026d4 <+1690>:	js     0x4026dd <main()+1699>
+   0x00000000004026d6 <+1692>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x00000000004026db <+1697>:	jmp    0x4026f2 <main()+1720>
+   0x00000000004026dd <+1699>:	mov    %rax,%rdx
+   0x00000000004026e0 <+1702>:	shr    %rdx
+   0x00000000004026e3 <+1705>:	and    $0x1,%eax
+   0x00000000004026e6 <+1708>:	or     %rax,%rdx
+   0x00000000004026e9 <+1711>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x00000000004026ee <+1716>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x00000000004026f2 <+1720>:	vdivsd 0x200(%rbp),%xmm0,%xmm0
+   0x00000000004026fa <+1728>:	vmovsd %xmm0,0x1e8(%rbp)
+   0x0000000000402702 <+1736>:	mov    0x1f0(%rbp),%rdx
+   0x0000000000402709 <+1743>:	vmovsd 0x1f8(%rbp),%xmm2
+   0x0000000000402711 <+1751>:	vmovsd 0x200(%rbp),%xmm1
+   0x0000000000402719 <+1759>:	mov    0x218(%rbp),%rax
+   0x0000000000402720 <+1766>:	vmovsd 0x1e8(%rbp),%xmm0
+   0x0000000000402728 <+1774>:	vmovsd %xmm0,0x20(%rsp)
+   0x000000000040272e <+1780>:	mov    %rdx,%r9
+   0x0000000000402731 <+1783>:	mov    %rax,%rcx
+   0x0000000000402734 <+1786>:	callq  0x401d0f <print_line(unsigned long long, double, double, unsigned long long, double)>
+   0x0000000000402739 <+1791>:	incq   0x2a0(%rbp)
+   0x0000000000402740 <+1798>:	jmpq   0x4023e6 <main()+940>
+   0x0000000000402745 <+1803>:	callq  0x401730 <print_divider()>
+   0x000000000040274a <+1808>:	lea    0x15f(%rbp),%rax
+   0x0000000000402751 <+1815>:	mov    %rax,%rcx
+   0x0000000000402754 <+1818>:	callq  0x402cb8 <std::allocator<char>::allocator()>
+   0x0000000000402759 <+1823>:	lea    0x15f(%rbp),%rdx
+   0x0000000000402760 <+1830>:	lea    0x130(%rbp),%rax
+   0x0000000000402767 <+1837>:	mov    %rdx,%r8
+   0x000000000040276a <+1840>:	lea    0xa904(%rip),%rdx        # 0x40d075
+   0x0000000000402771 <+1847>:	mov    %rax,%rcx
+   0x0000000000402774 <+1850>:	callq  0x40b300 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)>
+   0x0000000000402779 <+1855>:	lea    0x130(%rbp),%rax
+   0x0000000000402780 <+1862>:	mov    %rax,%rcx
+   0x0000000000402783 <+1865>:	callq  0x40184e <print_header(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+   0x0000000000402788 <+1870>:	lea    0x130(%rbp),%rax
+   0x000000000040278f <+1877>:	mov    %rax,%rcx
+   0x0000000000402792 <+1880>:	callq  0x40b4a0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+   0x0000000000402797 <+1885>:	lea    0x15f(%rbp),%rax
+   0x000000000040279e <+1892>:	mov    %rax,%rcx
+   0x00000000004027a1 <+1895>:	callq  0x402ca8 <std::allocator<char>::~allocator()>
+   0x00000000004027a6 <+1900>:	movq   $0x4,0x280(%rbp)
+   0x00000000004027b1 <+1911>:	cmpq   $0x8,0x280(%rbp)
+   0x00000000004027b9 <+1919>:	ja     0x402ae7 <main()+2733>
+   0x00000000004027bf <+1925>:	vmovsd 0xa9c1(%rip),%xmm0        # 0x40d188
+   0x00000000004027c7 <+1933>:	vmovsd %xmm0,-0x50(%rbp)
+   0x00000000004027cc <+1938>:	vmovsd 0xa9b4(%rip),%xmm0        # 0x40d188
+   0x00000000004027d4 <+1946>:	vmovsd %xmm0,-0x48(%rbp)
+   0x00000000004027d9 <+1951>:	vmovsd 0xa9a7(%rip),%xmm0        # 0x40d188
+   0x00000000004027e1 <+1959>:	vmovsd %xmm0,-0x40(%rbp)
+   0x00000000004027e6 <+1964>:	vmovsd 0xa99a(%rip),%xmm0        # 0x40d188
+   0x00000000004027ee <+1972>:	vmovsd %xmm0,-0x38(%rbp)
+   0x00000000004027f3 <+1977>:	vmovsd 0xa975(%rip),%xmm0        # 0x40d170
+   0x00000000004027fb <+1985>:	vmovsd %xmm0,-0x30(%rbp)
+   0x0000000000402800 <+1990>:	vmovsd 0xa968(%rip),%xmm0        # 0x40d170
+   0x0000000000402808 <+1998>:	vmovsd %xmm0,-0x28(%rbp)
+   0x000000000040280d <+2003>:	vmovsd 0xa95b(%rip),%xmm0        # 0x40d170
+   0x0000000000402815 <+2011>:	vmovsd %xmm0,-0x20(%rbp)
+   0x000000000040281a <+2016>:	vmovsd 0xa94e(%rip),%xmm0        # 0x40d170
+   0x0000000000402822 <+2024>:	vmovsd %xmm0,-0x18(%rbp)
+   0x0000000000402827 <+2029>:	lea    -0x50(%rbp),%rax
+   0x000000000040282b <+2033>:	mov    %rax,0x170(%rbp)
+   0x0000000000402832 <+2040>:	mov    0x170(%rbp),%rax
+   0x0000000000402839 <+2047>:	vmovapd (%rax),%ymm0
+   0x000000000040283d <+2051>:	vmovapd %ymm0,0x60(%rbx)
+   0x0000000000402842 <+2056>:	lea    -0x30(%rbp),%rax
+   0x0000000000402846 <+2060>:	mov    %rax,0x178(%rbp)
+   0x000000000040284d <+2067>:	mov    0x178(%rbp),%rax
+   0x0000000000402854 <+2074>:	vmovapd (%rax),%ymm0
+   0x0000000000402858 <+2078>:	vmovapd %ymm0,0x40(%rbx)
+   0x000000000040285d <+2083>:	mov    0x280(%rbp),%rax
+   0x0000000000402864 <+2090>:	test   %rax,%rax
+   0x0000000000402867 <+2093>:	js     0x402870 <main()+2102>
+   0x0000000000402869 <+2095>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x000000000040286e <+2100>:	jmp    0x402885 <main()+2123>
+   0x0000000000402870 <+2102>:	mov    %rax,%rdx
+   0x0000000000402873 <+2105>:	shr    %rdx
+   0x0000000000402876 <+2108>:	and    $0x1,%eax
+   0x0000000000402879 <+2111>:	or     %rax,%rdx
+   0x000000000040287c <+2114>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402881 <+2119>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x0000000000402885 <+2123>:	mov    0xa8ec(%rip),%rax        # 0x40d178
+   0x000000000040288c <+2130>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x0000000000402890 <+2134>:	vmovq  %rax,%xmm0
+   0x0000000000402895 <+2139>:	callq  0x404290 <pow>
+   0x000000000040289a <+2144>:	vcomisd 0xa8de(%rip),%xmm0        # 0x40d180
+   0x00000000004028a2 <+2152>:	jae    0x4028b2 <main()+2168>
+   0x00000000004028a4 <+2154>:	vcvttsd2si %xmm0,%rax
+   0x00000000004028a9 <+2159>:	mov    %rax,0x1e0(%rbp)
+   0x00000000004028b0 <+2166>:	jmp    0x4028db <main()+2209>
+   0x00000000004028b2 <+2168>:	vmovsd 0xa8c6(%rip),%xmm1        # 0x40d180
+   0x00000000004028ba <+2176>:	vsubsd %xmm1,%xmm0,%xmm0
+   0x00000000004028be <+2180>:	vcvttsd2si %xmm0,%rax
+   0x00000000004028c3 <+2185>:	mov    %rax,0x1e0(%rbp)
+   0x00000000004028ca <+2192>:	movabs $0x8000000000000000,%rax
+   0x00000000004028d4 <+2202>:	xor    %rax,0x1e0(%rbp)
+   0x00000000004028db <+2209>:	mov    0x1e0(%rbp),%rax
+   0x00000000004028e2 <+2216>:	mov    %rax,0x1e0(%rbp)
+   0x00000000004028e9 <+2223>:	callq  0x402c90 <std::chrono::_V2::system_clock::now()>
+   0x00000000004028ee <+2228>:	mov    %rax,0x88(%rbp)
+   0x00000000004028f5 <+2235>:	callq  0x40158c <rdtsc()>
+   0x00000000004028fa <+2240>:	mov    %rax,0x1d8(%rbp)
+   0x0000000000402901 <+2247>:	movq   $0x0,0x278(%rbp)
+   0x000000000040290c <+2258>:	mov    0x278(%rbp),%rax
+   0x0000000000402913 <+2265>:	test   %rax,%rax
+   0x0000000000402916 <+2268>:	js     0x40291f <main()+2277>
+   0x0000000000402918 <+2270>:	vcvtsi2sd %rax,%xmm6,%xmm6
+   0x000000000040291d <+2275>:	jmp    0x402934 <main()+2298>
+   0x000000000040291f <+2277>:	mov    %rax,%rdx
+   0x0000000000402922 <+2280>:	shr    %rdx
+   0x0000000000402925 <+2283>:	and    $0x1,%eax
+   0x0000000000402928 <+2286>:	or     %rax,%rdx
+   0x000000000040292b <+2289>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402930 <+2294>:	vaddsd %xmm0,%xmm0,%xmm6
+   0x0000000000402934 <+2298>:	mov    0x280(%rbp),%rax
+   0x000000000040293b <+2305>:	test   %rax,%rax
+   0x000000000040293e <+2308>:	js     0x402947 <main()+2317>
+   0x0000000000402940 <+2310>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x0000000000402945 <+2315>:	jmp    0x40295c <main()+2338>
+   0x0000000000402947 <+2317>:	mov    %rax,%rdx
+   0x000000000040294a <+2320>:	shr    %rdx
+   0x000000000040294d <+2323>:	and    $0x1,%eax
+   0x0000000000402950 <+2326>:	or     %rax,%rdx
+   0x0000000000402953 <+2329>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402958 <+2334>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x000000000040295c <+2338>:	mov    0xa815(%rip),%rax        # 0x40d178
+   0x0000000000402963 <+2345>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x0000000000402967 <+2349>:	vmovq  %rax,%xmm0
+   0x000000000040296c <+2354>:	callq  0x404290 <pow>
+   0x0000000000402971 <+2359>:	vmovsd %xmm0,%xmm1,%xmm1
+   0x0000000000402975 <+2363>:	vmovsd 0xa81b(%rip),%xmm0        # 0x40d198
+   0x000000000040297d <+2371>:	vdivsd %xmm0,%xmm1,%xmm0
+   0x0000000000402981 <+2375>:	vcomisd %xmm6,%xmm0
+   0x0000000000402985 <+2379>:	seta   %al
+   0x0000000000402988 <+2382>:	test   %al,%al
+   0x000000000040298a <+2384>:	je     0x4029b9 <main()+2431>
+   0x000000000040298c <+2386>:	vmovapd 0x60(%rbx),%ymm0
+   0x0000000000402991 <+2391>:	vmovapd %ymm0,0x20(%rbx)
+   0x0000000000402996 <+2396>:	vmovapd 0x40(%rbx),%ymm0
+   0x000000000040299b <+2401>:	vmovapd %ymm0,(%rbx)
+   0x000000000040299f <+2405>:	vmovapd 0x20(%rbx),%ymm0
+   0x00000000004029a4 <+2410>:	vdivpd (%rbx),%ymm0,%ymm0
+   0x00000000004029a8 <+2414>:	vmovapd %ymm0,0x60(%rbx)
+   0x00000000004029ad <+2419>:	incq   0x278(%rbp)
+   0x00000000004029b4 <+2426>:	jmpq   0x40290c <main()+2258>
+   0x00000000004029b9 <+2431>:	callq  0x40158c <rdtsc()>
+   0x00000000004029be <+2436>:	mov    %rax,0x1d0(%rbp)
+   0x00000000004029c5 <+2443>:	callq  0x402c90 <std::chrono::_V2::system_clock::now()>
+   0x00000000004029ca <+2448>:	mov    %rax,0x168(%rbp)
+   0x00000000004029d1 <+2455>:	lea    0x88(%rbp),%rdx
+   0x00000000004029d8 <+2462>:	lea    0x168(%rbp),%rax
+   0x00000000004029df <+2469>:	mov    %rax,%rcx
+   0x00000000004029e2 <+2472>:	callq  0x40a1f0 <std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> >, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > > const&)>
+   0x00000000004029e7 <+2477>:	mov    %rax,0x160(%rbp)
+   0x00000000004029ee <+2484>:	lea    0x160(%rbp),%rdx
+   0x00000000004029f5 <+2491>:	lea    0x80(%rbp),%rax
+   0x00000000004029fc <+2498>:	mov    %rax,%rcx
+   0x00000000004029ff <+2501>:	callq  0x40a180 <std::chrono::duration<double, std::ratio<1ll, 1ll> >::duration<long long, std::ratio<1ll, 1000000000ll>, void>(std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > const&)>
+   0x0000000000402a04 <+2506>:	lea    0x80(%rbp),%rax
+   0x0000000000402a0b <+2513>:	mov    %rax,%rcx
+   0x0000000000402a0e <+2516>:	callq  0x409b90 <std::chrono::duration<double, std::ratio<1ll, 1ll> >::count() const>
+   0x0000000000402a13 <+2521>:	vmovq  %xmm0,%rax
+   0x0000000000402a18 <+2526>:	mov    %rax,0x1c8(%rbp)
+   0x0000000000402a1f <+2533>:	mov    0x1e0(%rbp),%rax
+   0x0000000000402a26 <+2540>:	test   %rax,%rax
+   0x0000000000402a29 <+2543>:	js     0x402a32 <main()+2552>
+   0x0000000000402a2b <+2545>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x0000000000402a30 <+2550>:	jmp    0x402a47 <main()+2573>
+   0x0000000000402a32 <+2552>:	mov    %rax,%rdx
+   0x0000000000402a35 <+2555>:	shr    %rdx
+   0x0000000000402a38 <+2558>:	and    $0x1,%eax
+   0x0000000000402a3b <+2561>:	or     %rax,%rdx
+   0x0000000000402a3e <+2564>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402a43 <+2569>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x0000000000402a47 <+2573>:	vdivsd 0x1c8(%rbp),%xmm0,%xmm0
+   0x0000000000402a4f <+2581>:	vmovsd %xmm0,0x1c0(%rbp)
+   0x0000000000402a57 <+2589>:	mov    0x1d0(%rbp),%rax
+   0x0000000000402a5e <+2596>:	sub    0x1d8(%rbp),%rax
+   0x0000000000402a65 <+2603>:	mov    %rax,0x1b8(%rbp)
+   0x0000000000402a6c <+2610>:	mov    0x1b8(%rbp),%rax
+   0x0000000000402a73 <+2617>:	test   %rax,%rax
+   0x0000000000402a76 <+2620>:	js     0x402a7f <main()+2629>
+   0x0000000000402a78 <+2622>:	vcvtsi2sd %rax,%xmm0,%xmm0
+   0x0000000000402a7d <+2627>:	jmp    0x402a94 <main()+2650>
+   0x0000000000402a7f <+2629>:	mov    %rax,%rdx
+   0x0000000000402a82 <+2632>:	shr    %rdx
+   0x0000000000402a85 <+2635>:	and    $0x1,%eax
+   0x0000000000402a88 <+2638>:	or     %rax,%rdx
+   0x0000000000402a8b <+2641>:	vcvtsi2sd %rdx,%xmm0,%xmm0
+   0x0000000000402a90 <+2646>:	vaddsd %xmm0,%xmm0,%xmm0
+   0x0000000000402a94 <+2650>:	vdivsd 0x1c8(%rbp),%xmm0,%xmm0
+   0x0000000000402a9c <+2658>:	vmovsd %xmm0,0x1b0(%rbp)
+   0x0000000000402aa4 <+2666>:	mov    0x1b8(%rbp),%rdx
+   0x0000000000402aab <+2673>:	vmovsd 0x1c0(%rbp),%xmm2
+   0x0000000000402ab3 <+2681>:	vmovsd 0x1c8(%rbp),%xmm1
+   0x0000000000402abb <+2689>:	mov    0x1e0(%rbp),%rax
+   0x0000000000402ac2 <+2696>:	vmovsd 0x1b0(%rbp),%xmm0
+   0x0000000000402aca <+2704>:	vmovsd %xmm0,0x20(%rsp)
+   0x0000000000402ad0 <+2710>:	mov    %rdx,%r9
+   0x0000000000402ad3 <+2713>:	mov    %rax,%rcx
+   0x0000000000402ad6 <+2716>:	callq  0x401d0f <print_line(unsigned long long, double, double, unsigned long long, double)>
+   0x0000000000402adb <+2721>:	incq   0x280(%rbp)
+   0x0000000000402ae2 <+2728>:	jmpq   0x4027b1 <main()+1911>
+   0x0000000000402ae7 <+2733>:	callq  0x401730 <print_divider()>
+   0x0000000000402aec <+2738>:	mov    $0x0,%eax
+   0x0000000000402af1 <+2743>:	jmpq   0x402b89 <main()+2895>
+   0x0000000000402af6 <+2748>:	mov    %rax,%rbx
+   0x0000000000402af9 <+2751>:	lea    0xb0(%rbp),%rax
+   0x0000000000402b00 <+2758>:	mov    %rax,%rcx
+   0x0000000000402b03 <+2761>:	callq  0x40b4a0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+   0x0000000000402b08 <+2766>:	jmp    0x402b0d <main()+2771>
+   0x0000000000402b0a <+2768>:	mov    %rax,%rbx
+   0x0000000000402b0d <+2771>:	lea    0xdf(%rbp),%rax
+   0x0000000000402b14 <+2778>:	mov    %rax,%rcx
+   0x0000000000402b17 <+2781>:	callq  0x402ca8 <std::allocator<char>::~allocator()>
+   0x0000000000402b1c <+2786>:	mov    %rbx,%rax
+   0x0000000000402b1f <+2789>:	mov    %rax,%rcx
+   0x0000000000402b22 <+2792>:	callq  0x404140 <_Unwind_Resume>
+   0x0000000000402b27 <+2797>:	mov    %rax,%rbx
+   0x0000000000402b2a <+2800>:	lea    0xf0(%rbp),%rax
+   0x0000000000402b31 <+2807>:	mov    %rax,%rcx
+   0x0000000000402b34 <+2810>:	callq  0x40b4a0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+   0x0000000000402b39 <+2815>:	jmp    0x402b3e <main()+2820>
+   0x0000000000402b3b <+2817>:	mov    %rax,%rbx
+   0x0000000000402b3e <+2820>:	lea    0x11f(%rbp),%rax
+   0x0000000000402b45 <+2827>:	mov    %rax,%rcx
+   0x0000000000402b48 <+2830>:	callq  0x402ca8 <std::allocator<char>::~allocator()>
+   0x0000000000402b4d <+2835>:	mov    %rbx,%rax
+   0x0000000000402b50 <+2838>:	mov    %rax,%rcx
+   0x0000000000402b53 <+2841>:	callq  0x404140 <_Unwind_Resume>
+   0x0000000000402b58 <+2846>:	mov    %rax,%rbx
+   0x0000000000402b5b <+2849>:	lea    0x130(%rbp),%rax
+   0x0000000000402b62 <+2856>:	mov    %rax,%rcx
+   0x0000000000402b65 <+2859>:	callq  0x40b4a0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()>
+   0x0000000000402b6a <+2864>:	jmp    0x402b6f <main()+2869>
+   0x0000000000402b6c <+2866>:	mov    %rax,%rbx
+   0x0000000000402b6f <+2869>:	lea    0x15f(%rbp),%rax
+   0x0000000000402b76 <+2876>:	mov    %rax,%rcx
+   0x0000000000402b79 <+2879>:	callq  0x402ca8 <std::allocator<char>::~allocator()>
+   0x0000000000402b7e <+2884>:	mov    %rbx,%rax
+   0x0000000000402b81 <+2887>:	mov    %rax,%rcx
+   0x0000000000402b84 <+2890>:	callq  0x404140 <_Unwind_Resume>
+   0x0000000000402b89 <+2895>:	vmovaps 0x2c0(%rbp),%xmm6
+   0x0000000000402b91 <+2903>:	add    $0x358,%rsp
+   0x0000000000402b98 <+2910>:	pop    %rbx
+   0x0000000000402b99 <+2911>:	pop    %rbp
+   0x0000000000402b9a <+2912>:	retq
