@@ -1,0 +1,9 @@
+Date = Wed May 24 15:46:59 MSK 2023
+Host = cn-029
+WorkDir = /home/nvinnikov
+
+Number of Nodes Allocated = 1
+Number of Tasks Allocated = 1
+Numbers of Cores/Task Allocated = 4
+Time spent executing by the GPU: 14.95626 ms 
+First element is: 9929.49121
