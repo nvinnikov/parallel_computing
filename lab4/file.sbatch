@@ -16,4 +16,4 @@ echo "Numbers of Cores/Task Allocated = $SLURM_CPUS_PER_TASK"
 
 module load CUDA
 
-srun home/nvinnikov/graph
+srun home/nvinnikov/graph > graph_output.log
