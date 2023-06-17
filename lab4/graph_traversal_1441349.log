@@ -1,0 +1,7 @@
+Date = Sat Jun 17 16:40:21 MSK 2023
+Host = cn-012
+WorkDir = /home/nvinnikov
+
+Number of Nodes Allocated = 1
+Number of Tasks Allocated = 1
+Numbers of Cores/Task Allocated = 4
