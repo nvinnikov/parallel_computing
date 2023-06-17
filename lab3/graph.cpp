@@ -54,11 +54,11 @@ int main(int argc, char* argv[]) {
 
     cout << "Process " << rank << " starting BFS" << endl;
 
-    double startTime = getTime(); // Засечка времени выполнения начала BFS
+    double startTime = getTime();
 
     BFS(graph, startNode, rank, numProcesses);
 
-    double endTime = getTime(); // Засечка времени выполнения окончания BFS
+    double endTime = getTime();
 
     cout << "Process " << rank << " finished BFS in " << (endTime - startTime) << " seconds" << endl;
 
