@@ -2,8 +2,15 @@
 #include <vector>
 #include <queue>
 #include <mpi.h>
+#include <sys/time.h>
 
 using namespace std;
+
+double getTime() {
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    return tp.tv_sec + tp.tv_usec / 1e6;
+}
 
 void BFS(vector<vector<int>>& graph, int startNode, int rank, int numProcesses) {
     int numNodes = graph.size();
@@ -46,7 +53,14 @@ int main(int argc, char* argv[]) {
     int startNode = 0;
 
     cout << "Process " << rank << " starting BFS" << endl;
+
+    double startTime = getTime(); // Засечка времени выполнения начала BFS
+
     BFS(graph, startNode, rank, numProcesses);
+
+    double endTime = getTime(); // Засечка времени выполнения окончания BFS
+
+    cout << "Process " << rank << " finished BFS in " << (endTime - startTime) << " seconds" << endl;
 
     MPI_Finalize();
 
