@@ -1,0 +1,475 @@
+[nvinnikov@sms ~]$ mpirun -np 2 ./graph_upd
+Process 0 starting BFS
+Process 0 visiting node 0
+Process 0 visiting node 1
+Process 0 visiting node 2
+Process 0 visiting node 3
+Process 0 visiting node 4
+Process 0 visiting node 5
+Process 0 finished BFS in 3.19481e-05 seconds
+Process 1 starting BFS
+Process 1 visiting node 0
+Process 1 visiting node 1
+Process 1 visiting node 2
+Process 1 visiting node 3
+Process 1 visiting node 4
+Process 1 visiting node 5
+Process 1 finished BFS in 2.81334e-05 seconds
+
+[nvinnikov@sms ~]$ mpirun -np 4 ./graph_upd
+Process 2 starting BFS
+Process 2 visiting node 0
+Process 2 visiting node 1
+Process 2 visiting node 2
+Process 2 visiting node 3
+Process 2 visiting node 4
+Process 2 visiting node 5
+Process 0 starting BFS
+Process 0 visiting node 0
+Process 0 visiting node 1
+Process 0 visiting node 2
+Process 0 visiting node 3
+Process 0 visiting node 4
+Process 0 visiting node 5
+Process 1 starting BFS
+Process 1 visiting node 0
+Process 1 visiting node 1
+Process 1 visiting node 2
+Process 1 visiting node 3
+Process 1 visiting node 4
+Process 1 visiting node 5
+Process 2 finished BFS in 5.6982e-05 seconds
+Process 0 finished BFS in 2.7895e-05 seconds
+Process 3 starting BFS
+Process 3 visiting node 0
+Process 3 visiting node 1
+Process 3 visiting node 2
+Process 3 visiting node 3
+Process 3 visiting node 4
+Process 3 visiting node 5
+Process 1 finished BFS in 6.31809e-05 seconds
+Process 3 finished BFS in 9.29832e-05 seconds
+
+[nvinnikov@sms ~]$ mpirun -np 8 ./graph_upd
+Process 3 starting BFS
+Process 3 visiting node 0
+Process 3 visiting node 1
+Process 3 visiting node 2
+Process 3 visiting node 3
+Process 3 visiting node 4
+Process 3 visiting node 5
+Process 5 starting BFS
+Process 5 visiting node 0
+Process 5 visiting node 1
+Process 5 visiting node 2
+Process 5 visiting node 3
+Process 5 visiting node 4
+Process 5 visiting node 5
+Process 7 starting BFS
+Process 7 visiting node 0
+Process 7 visiting node 1
+Process 7 visiting node 2
+Process 7 visiting node 3
+Process 7 visiting node 4
+Process 7 visiting node 5
+Process 3 finished BFS in 3.09944e-05 seconds
+Process 5 finished BFS in 3.60012e-05 seconds
+Process 7 finished BFS in 3.91006e-05 seconds
+Process 0 starting BFS
+Process 0 visiting node 0
+Process 0 visiting node 1
+Process 0 visiting node 2
+Process 0 visiting node 3
+Process 0 visiting node 4
+Process 0 visiting node 5
+Process 0 finished BFS in 2.90871e-05 seconds
+Process 1 starting BFS
+Process 1 visiting node 0
+Process 1 visiting node 1
+Process 1 visiting node 2
+Process 1 visiting node 3
+Process 1 visiting node 4
+Process 1 visiting node 5
+Process 1 finished BFS in 2.98023e-05 seconds
+Process 2 starting BFS
+Process 2 visiting node 0
+Process 2 visiting node 1
+Process 2 visiting node 2
+Process 2 visiting node 3
+Process 2 visiting node 4
+Process 2 visiting node 5
+Process 2 finished BFS in 3.09944e-05 seconds
+Process 4 starting BFS
+Process 4 visiting node 0
+Process 4 visiting node 1
+Process 4 visiting node 2
+Process 4 visiting node 3
+Process 6 starting BFS
+Process 6 visiting node 0
+Process 6 visiting node 1
+Process 6 visiting node 2
+Process 6 visiting node 3
+Process 6 visiting node 4
+Process 6 visiting node 5
+Process 6 finished BFS in 3.00407e-05 seconds
+Process 4 visiting node 4
+Process 4 visiting node 5
+Process 4 finished BFS in 8.39233e-05 seconds
+
+[nvinnikov@sms ~]$ mpirun -np 16 ./graph_upd
+Process 1 starting BFS
+Process 1 visiting node 0
+Process 1 visiting node 1
+Process 1 visiting node 2
+Process 1 visiting node 3
+Process 1 visiting node 4
+Process 1 visiting node 5
+Process 3 starting BFS
+Process 3 visiting node 0
+Process 3 visiting node 1
+Process 3 visiting node 2
+Process 3 visiting node 3
+Process 3 visiting node 4
+Process 3 visiting node 5
+Process 3 finished BFS in 3.29018e-05 seconds
+Process 7 starting BFS
+Process 7 visiting node 0
+Process 7 visiting node 1
+Process 7 visiting node 2
+Process 7 visiting node 3
+Process 7 visiting node 4
+Process 7 visiting node 5
+Process 7 finished BFS in 4.1008e-05 seconds
+Process 1 finished BFS in 4.60148e-05 seconds
+Process 9 starting BFS
+Process 9 visiting node 0
+Process 9 visiting node 1
+Process 9 visiting node 2
+Process 9 visiting node 3
+Process 9 visiting node 4
+Process 9 visiting node 5
+Process 9 finished BFS in 4.29153e-05 seconds
+Process 0 starting BFS
+Process 0 visiting node 0
+Process 0 visiting node 1
+Process 0 visiting node 2
+Process 0 visiting node 3
+Process 0 visiting node 4
+Process 0 visiting node 5
+Process 0 finished BFS in 4.1008e-05 seconds
+Process 2 starting BFS
+Process 2 visiting node 0
+Process 2 visiting node 1
+Process 2 visiting node 2
+Process 2 visiting node 3
+Process 2 visiting node 4
+Process 2 visiting node 5
+Process 2 finished BFS in 5.6982e-05 seconds
+Process 4 starting BFS
+Process 4 visiting node 0
+Process 4 visiting node 1
+Process 4 visiting node 2
+Process 4 visiting node 3
+Process 4 visiting node 4
+Process 4 visiting node 5
+Process 4 finished BFS in 2.7895e-05 seconds
+Process 5 starting BFS
+Process 5 visiting node 0
+Process 5 visiting node 1
+Process 5 visiting node 2
+Process 5 visiting node 3
+Process 5 visiting node 4
+Process 5 visiting node 5
+Process 5 finished BFS in 8.60691e-05 seconds
+Process 6 starting BFS
+Process 6 visiting node 0
+Process 6 visiting node 1
+Process 6 visiting node 2
+Process 6 visiting node 3
+Process 6 visiting node 4
+Process 6 visiting node 5
+Process 6 finished BFS in 4.1008e-05 seconds
+Process 8 starting BFS
+Process 8 visiting node 0
+Process 8 visiting node 1
+Process 8 visiting node 2
+Process 8 visiting node 3
+Process 8 visiting node 4
+Process 8 visiting node 5
+Process 8 finished BFS in 3.09944e-05 seconds
+Process 10 starting BFS
+Process 10 visiting node 0
+Process 10 visiting node 1
+Process 10 visiting node 2
+Process 10 visiting node 3
+Process 10 visiting node 4
+Process 10 visiting node 5
+Process 10 finished BFS in 6.79493e-05 seconds
+Process 11 starting BFS
+Process 11 visiting node 0
+Process 11 visiting node 1
+Process 11 visiting node 2
+Process 11 visiting node 3
+Process 11 visiting node 4
+Process 11 visiting node 5
+Process 11 finished BFS in 4.00543e-05 seconds
+Process 12 starting BFS
+Process 12 visiting node 0
+Process 12 visiting node 1
+Process 12 visiting node 2
+Process 12 visiting node 3
+Process 12 visiting node 4
+Process 12 visiting node 5
+Process 12 finished BFS in 3.00407e-05 seconds
+Process 13 starting BFS
+Process 13 visiting node 0
+Process 13 visiting node 1
+Process 13 visiting node 2
+Process 13 visiting node 3
+Process 13 visiting node 4
+Process 13 visiting node 5
+Process 13 finished BFS in 4.1008e-05 seconds
+Process 14 starting BFS
+Process 14 visiting node 0
+Process 14 visiting node 1
+Process 14 visiting node 2
+Process 14 visiting node 3
+Process 14 visiting node 4
+Process 14 visiting node 5
+Process 14 finished BFS in 3.09944e-05 seconds
+Process 15 starting BFS
+Process 15 visiting node 0
+Process 15 visiting node 1
+Process 15 visiting node 2
+Process 15 visiting node 3
+Process 15 visiting node 4
+Process 15 visiting node 5
+Process 15 finished BFS in 5.00679e-05 seconds
+
+[nvinnikov@sms ~]$ mpirun -np 24 ./graph_upd
+Process 4 starting BFS
+Process 4 visiting node 0
+Process 4 visiting node 1
+Process 4 visiting node 2
+Process 4 visiting node 3
+Process 4 visiting node 4
+Process 4 visiting node 5
+Process 6 starting BFS
+Process 6 visiting node 0
+Process 6 visiting node 1
+Process 6 visiting node 2
+Process 6 visiting node 3
+Process 6 visiting node 4
+Process 6 visiting node 5
+Process 12 starting BFS
+Process 12 visiting node 0
+Process 12 visiting node 1
+Process 12 visiting node 2
+Process 12 visiting node 3
+Process 12 visiting node 4
+Process 12 visiting node 5
+Process 14 starting BFS
+Process 14 visiting node 0
+Process 14 visiting node 1
+Process 14 visiting node 2
+Process 14 visiting node 3
+Process 14 visiting node 4
+Process 14 visiting node 5
+Process 3 starting BFS
+Process 3 visiting node 0
+Process 3 visiting node 1
+Process 3 visiting node 2
+Process 3 visiting node 3
+Process 3 visiting node 4
+Process 3 visiting node 5
+Process 4 finished BFS in 4.1008e-05 seconds
+Process 10 starting BFS
+Process 10 visiting node 0
+Process 10 visiting node 1
+Process 10 visiting node 2
+Process 10 visiting node 3
+Process 10 visiting node 4
+Process 10 visiting node 5
+Process 6 finished BFS in 3.19481e-05 seconds
+Process 12 finished BFS in 4.29153e-05 seconds
+Process 17 starting BFS
+Process 17 visiting node 0
+Process 17 visiting node 1
+Process 17 visiting node 2
+Process 17 visiting node 3
+Process 17 visiting node 4
+Process 17 visiting node 5
+Process 17 finished BFS in 3.60012e-05 seconds
+Process 19 starting BFS
+Process 19 visiting node 0
+Process 19 visiting node 1
+Process 19 visiting node 2
+Process 19 visiting node 3
+Process 19 visiting node 4
+Process 19 visiting node 5
+Process 22 starting BFS
+Process 22 visiting node 0
+Process 22 visiting node 1
+Process 22 visiting node 2
+Process 22 visiting node 3
+Process 22 visiting node 4
+Process 22 visiting node 5
+Process 22 finished BFS in 3.12328e-05 seconds
+Process 23 starting BFS
+Process 23 visiting node 0
+Process 23 visiting node 1
+Process 23 visiting node 2
+Process 23 visiting node 3
+Process 23 visiting node 4
+Process 23 visiting node 5
+Process 23 finished BFS in 3.19481e-05 seconds
+Process 14 finished BFS in 3.09944e-05 seconds
+Process 0 starting BFS
+Process 0 visiting node 0
+Process 0 visiting node 1
+Process 0 visiting node 2
+Process 0 visiting node 3
+Process 0 visiting node 4
+Process 0 visiting node 5
+Process 0 finished BFS in 4.1008e-05 seconds
+Process 1 starting BFS
+Process 1 visiting node 0
+Process 1 visiting node 1
+Process 1 visiting node 2
+Process 1 visiting node 3
+Process 1 visiting node 4
+Process 1 visiting node 5
+Process 1 finished BFS in 5.4121e-05 seconds
+Process 2 starting BFS
+Process 2 visiting node 0
+Process 2 visiting node 1
+Process 2 visiting node 2
+Process 2 visiting node 3
+Process 2 visiting node 4
+Process 2 visiting node 5
+Process 2 finished BFS in 2.90871e-05 seconds
+Process 5 starting BFS
+Process 5 visiting node 0
+Process 5 visiting node 1
+Process 5 visiting node 2
+Process 5 visiting node 3
+Process 5 visiting node 4
+Process 5 visiting node 5
+Process 5 finished BFS in 3.29018e-05 seconds
+Process 3 finished BFS in 3.40939e-05 seconds
+Process 7 starting BFS
+Process 7 visiting node 0
+Process 7 visiting node 1
+Process 7 visiting node 2
+Process 7 visiting node 3
+Process 7 visiting node 4
+Process 7 visiting node 5
+Process 7 finished BFS in 4.3869e-05 seconds
+Process 8 starting BFS
+Process 8 visiting node 0
+Process 8 visiting node 1
+Process 8 visiting node 2
+Process 8 visiting node 3
+Process 8 visiting node 4
+Process 8 visiting node 5
+Process 8 finished BFS in 4.69685e-05 seconds
+Process 9 starting BFS
+Process 9 visiting node 0
+Process 11 starting BFS
+Process 11 visiting node 0
+Process 11 visiting node 1
+Process 11 visiting node 2
+Process 11 visiting node 3
+Process 11 visiting node 4
+Process 11 visiting node 5
+Process 11 finished BFS in 4.1008e-05 seconds
+Process 10 finished BFS in 4.19617e-05 seconds
+Process 13 starting BFS
+Process 13 visiting node 0
+Process 13 visiting node 1
+Process 13 visiting node 2
+Process 13 visiting node 3
+Process 13 visiting node 4
+Process 13 visiting node 5
+Process 13 finished BFS in 4.69685e-05 seconds
+Process 15 starting BFS
+Process 15 visiting node 0
+Process 15 visiting node 1
+Process 15 visiting node 2
+Process 15 visiting node 3
+Process 15 visiting node 4
+Process 15 visiting node 5
+Process 15 finished BFS in 4.3869e-05 seconds
+Process 16 starting BFS
+Process 16 visiting node 0
+Process 16 visiting node 1
+Process 16 visiting node 2
+Process 16 visiting node 3
+Process 16 visiting node 4
+Process 16 visiting node 5
+Process 16 finished BFS in 3.00407e-05 seconds
+Process 18 starting BFS
+Process 18 visiting node 0
+Process 18 visiting node 1
+Process 18 visiting node 2
+Process 18 visiting node 3
+Process 18 visiting node 4
+Process 18 visiting node 5
+Process 18 finished BFS in 4.69685e-05 seconds
+Process 20 starting BFS
+Process 20 visiting node 0
+Process 20 visiting node 1
+Process 20 visiting node 2
+Process 20 visiting node 3
+Process 20 visiting node 4
+Process 20 visiting node 5
+Process 20 finished BFS in 2.90871e-05 seconds
+Process 21 starting BFS
+Process 21 visiting node 0
+Process 21 visiting node 1
+Process 21 visiting node 2
+Process 21 visiting node 3
+Process 21 visiting node 4
+Process 21 visiting node 5
+Process 21 finished BFS in 3.79086e-05 seconds
+Process 19 finished BFS in 4.41074e-05 seconds
+Process 9 visiting node 1
+Process 9 visiting node 2
+Process 9 visiting node 3
+Process 9 visiting node 4
+Process 9 visiting node 5
+Process 9 finished BFS in 8.51154e-05 seconds
+
+[nvinnikov@sms ~]$ mpirun -np 32 ./graph_upd
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 32
+slots that were requested by the application:
+
+  ./graph_upd
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+[nvinnikov@sms ~]$ 
+
+
